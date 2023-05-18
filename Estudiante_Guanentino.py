@@ -12,9 +12,21 @@ from tkinter import messagebox
 
 # abrir toplevel datos
 def datos_salud():
-    pass
+    global datos_salud
+    datos_salud = Toplevel()
+    datos_salud.title("Sebastian David Hernandez Reyes")
+    datos_salud.resizable(False, False)
+    datos_salud.geometry("300x300")
+    datos_salud.config(bg="black")
+
 def datos_estudiante():
-    pass
+    global datos_estudiante
+    datos_estudiante= Toplevel()
+    datos_estudiante.title("Sebastian David Hernandez Reyes")
+    datos_estudiante.resizable(False, False)
+    datos_estudiante.geometry("300x300")
+    datos_estudiante.config(bg="black")
+
 def abrir_toplevel_datos():
     global toplevel_datos
     toplevel_datos = Toplevel()
@@ -31,7 +43,7 @@ def abrir_toplevel_datos():
 ventana_principal = Tk()
 
 # titulo de la ventana
-ventana_principal.title("Estudiantes Colegio San Jose de Guanentá")
+ventana_principal.title("Nota definitiva de Estudiantes Colegio San Jose de Guanentá")
 
 # tamaño de la ventana
 ventana_principal.geometry("600x600")
@@ -63,15 +75,56 @@ logo = PhotoImage(file ="img/Escudo Colegio.png")
 lb_logo = Label(frame_entrada, image=logo, bg="white")
 lb_logo.place(x=15,y=10)
 
-# caja de texto para valor en centigrados
+# caja de texto para Nombre
 entry_Nombre = Entry(frame_entrada, textvariable="Nombre")
-entry_Nombre.config(bg="white", fg="blue", font=("Times New Roman", 18), width=6)
+entry_Nombre.config(bg="white", fg="blue", font=("Times New Roman", 18), width=16)
 entry_Nombre.focus_set()
-entry_Nombre.place(x=180,y=200)
+entry_Nombre.place(x=120,y=200)
 
 waos2 = Label (frame_entrada, text="Nombre:")
 waos2.config(font=("Arial", 20))
-waos2.place(x=60, y=200)
+waos2.place(x=10, y=200)
+
+# caja de texto para Grado
+entry_Nombre = Entry(frame_entrada, textvariable="Grado")
+entry_Nombre.config(bg="white", fg="blue", font=("Times New Roman", 18), width=16)
+entry_Nombre.focus_set()
+entry_Nombre.place(x=120,y=280)
+
+waos2 = Label (frame_entrada, text="Grado:")
+waos2.config(font=("Arial", 20))
+waos2.place(x=30, y=280)
+
+# caja de texto para Numero
+entry_Nombre = Entry(frame_entrada, textvariable="Numero")
+entry_Nombre.config(bg="white", fg="blue", font=("Times New Roman", 18), width=16)
+entry_Nombre.focus_set()
+entry_Nombre.place(x=120,y=350)
+
+waos2 = Label (frame_entrada, text="Numero:")
+waos2.config(font=("Arial", 20))
+waos2.place(x=10, y=350)
+
+# caja de texto para correo
+entry_Nombre = Entry(frame_entrada, textvariable="Correo")
+entry_Nombre.config(bg="white", fg="blue", font=("Times New Roman", 18), width=16)
+entry_Nombre.focus_set()
+entry_Nombre.place(x=120,y=420)
+
+waos2 = Label (frame_entrada, text="Correo:")
+waos2.config(font=("Arial", 20))
+waos2.place(x=23, y=420)
+
+
+waos = Label (frame_entrada, text="Notas del Estudiante")
+waos.config(font=("Arial", 17))
+waos.place(x=340, y=60)
+
+
+waos = Label (frame_entrada, text="IMC")
+waos.config(font=("Arial", 17))
+waos.place(x=380, y=290)
+
 
 # boton para escojer piedra
 
